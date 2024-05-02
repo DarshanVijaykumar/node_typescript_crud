@@ -16,9 +16,7 @@ const readItems = () => {
 
 const updateItem = (id: string, editName: string) => {
   return shoppingList.find((item) => {
-    if (item.id === id) {
-      editName ? (item.name = editName) : item.name;
-    }
+    if (item.id === id) return (item.name = editName);
   });
 };
 
